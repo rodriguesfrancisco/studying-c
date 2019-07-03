@@ -1,19 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    float fahr, celsius;
-    int lowerTemperatureLimit, upperTemperatureLimit, step;
+    int fahr;
 
-    lowerTemperatureLimit = 0;
-    upperTemperatureLimit = 300;
-    step = 20;
-
-    fahr = lowerTemperatureLimit;
-
-    printf("%3s %6s \n", "Fahrenheit", "Celsius");
-    while(fahr <= upperTemperatureLimit) {
-        celsius = (5.0 / 9.0)* (fahr - 32.0);
-        printf("%9.0f %7.1f\n", fahr, celsius);
-        fahr = fahr + step;
-    }    
+    for(fahr = 0; fahr <= 300; fahr = fahr + 20) {
+        printf("%3d %6.1f\n", fahr, (5.0/9.0) * (fahr-32));
+    }
 }
